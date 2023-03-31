@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tarea5-WebStudio</title>
+    <title>WebStudio</title>
       <link rel="stylesheet" href="./css/styles.css" />
         <link
     rel="stylesheet"
@@ -25,42 +25,47 @@
   <h1 class="logo">WebStudio</h1>
    <nav class="nav-menu">
     <ul class="menu">
-    <li ><a href="index.html" class="decoration-Studio"><h3>Estudio</h3></a> </li>
-    <li ><a href="portafolio.html" class="decoration-subpages"><h3 >Portafolio</h3></a></li>
+    <li ><a href="index.html" class="decoration-Studio underline"><h3>Estudio</h3></a> </li>
+    <li ><a href="portafolio.html" class="decoration-subpages underline"><h3 >Portafolio</h3></a></li>
     <li >
-      <a href="index.html" class="decoration-subpages"><h3>Contactos</h3></a></li>
+      <a href="index.html" class="decoration-subpages underline"><h3>Contactos</h3></a></li>
 </ul>
   </nav>
   <nav class="nav-contactos" >
   <ul class="contactos">
       <li class="svg-phone">
                   <svg class="size-icon"> <use href="./images/icon.svg#icon-sobre-activable"></use></svg>
-                          <a href="mailto:mail@gmail.com" class="decoration-mail">info@devstudio.com</a>
+                          <a href="mailto:mail@gmail.com" class="decoration-mail underline "><h3>info@devstudio.com</h3> </a>
       </li>
       <li class="svg-phone">
                 <svg class="size-icon"> <use href="./images/icon.svg#icon-telfono-inteligente"></use></svg>
-      <a href="phone" class="decoration-phone">+525555296000</a>
+      <a href="phone" class="decoration-phone underline"> <h3>+525555296000</h3></a>
     </li>
     </ul>
   </nav>
 </header>
-  <!-- SOLUCIONES EFICACES SECTION-BANNER -->
-    <section class="section-banner">
-        <main class="main-banner">
-        <div class="banner-background-img">
-            <h1 class="title">SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
-            <div class="button-service">
-            <a href=""></a>
-            <input
-                class="button-title"
-                type="button"
-                value="Solicite nuestro servicio"
-            />
-            </div>
+
+    <!-- BANNER-MODAL -->
+     <section>
+      <!-- VENTANA MODAL -->
+      <div class="modal">
+        <div class="modal-container">
+                      <a href="#" class="modal-close">
+            <span class="x">X</span></a>
         </div>
-        </main>
+      </div>
+      <!-- FIN VENTANA MODAL -->
+      <div class="hero">
+        <h1 class="hero-title">SOLUCIONES EFICACES PARA SU NEGOCIO</h1>
+        <div class="container-button">
+          <a href="#" class="button">Solicite nuestro servicio</a>
+        </div>
+             </div>
+             <script src="./js/modal.js"></script>
     </section>
-    <!-- SOLUCIONES EFICACES SECTION-ARTICULOS -->
+
+
+        <!-- SOLUCIONES EFICACES SECTION-ARTICULOS -->
       <main class="main">
         <article class="article">
           <!-- ART ANTENA -->
@@ -451,49 +456,52 @@
 
     <!-- FOOTER -->
 <footer class="footer">
-  <div class="footer-contacts">
-    <ul class="footer-contacts-1">
-      <li><h1 class="logo logo-footer">WebStudio</h1></li>
-      <li><address>Calz. Ticomán 500, Ciudad de México, CDMX, México </address></li>
-      <li><a href="mailto:mail@gmail.com" class="footer-decoration">info@devstudio.com</a></li>
-      <li><a href="phone" class="footer-decoration">+525555296000</a></li>
-    </ul>
-  </div>
-  <div class="footer-social">
-    <h3 class="footer-search">ENCUENTRANOS EN</h3>
-    <div class="footer-svg">
-      <ul class="footer-direction">
-        <div class="icon-container">
-          <li>
-            <svg class="footer-size-icon">
-              <use href="./images/icon.svg#icon-instagram"></use>
-            </svg>
-          </li>
-        </div>
-        <div class="icon-container">
-          <li>
-            <svg class="footer-size-icon">
-              <use href="./images/icon.svg#icon-twitter"></use>
-            </svg>
-          </li>
-        </div>
-        <div class="icon-container">
-          <li>
-            <svg class="footer-size-icon">
-              <use href="./images/icon.svg#icon-facebook"></use>
-            </svg>
-          </li>
-        </div>
-        <div class="icon-container">
-          <li>
-            <svg class="footer-size-icon">
-              <use href="./images/icon.svg#icon-linkedin"></use>
-            </svg>
-          </li>
-        </div>
+  
+    <div class="footer-contacts">
+      <ul class="footer-contacts-1">
+        <li><h1 class="logo logo-footer">WebStudio</h1></li>
+        <li><address>Calz. Ticomán 500, Ciudad de México, CDMX, México </address></li>
+        <li><a href="mailto:mail@gmail.com" class="footer-decoration">info@devstudio.com</a></li>
+        <li><a href="phone" class="footer-decoration">+525555296000</a></li>
       </ul>
     </div>
-  </div>
+    <div class="footer-social">
+      <h3 class="footer-search">ENCUENTRANOS EN</h3>
+      <div class="footer-svg">
+        <ul class="footer-direction">
+          <div class="icon-container">
+            <li>
+              <svg class="footer-size-icon">
+                <use href="./images/icon.svg#icon-instagram"></use>
+              </svg>
+            </li>
+          </div>
+          <div class="icon-container">
+            <li>
+              <svg class="footer-size-icon">
+                <use href="./images/icon.svg#icon-twitter"></use>
+              </svg>
+            </li>
+          </div>
+          <div class="icon-container">
+            <li>
+              <svg class="footer-size-icon">
+                <use href="./images/icon.svg#icon-facebook"></use>
+              </svg>
+            </li>
+          </div>
+          <div class="icon-container">
+            <li>
+              <svg class="footer-size-icon">
+                <use href="./images/icon.svg#icon-linkedin"></use>
+              </svg>
+            </li>
+          </div>
+        </ul>
+      </div>
+    </div>
+
+  
 </footer>
   </body>
 </html>

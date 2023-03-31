@@ -3,7 +3,7 @@
   padding: 0;
   box-sizing: border-box;
 }
-body {
+.body {
   width: 1600px;
   margin: 0 auto;
   background-color: #ffffff;
@@ -21,15 +21,14 @@ body {
   height: 80px;
   margin: 0 auto;
 }
+
 .logo {
   display: flex;
   flex-direction: row;
   margin: 0 auto;
-
-  margin-left: 215px;
+  align-content: space-around;
   justify-content: center;
   align-items: center;
-
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -52,7 +51,7 @@ body {
   margin: 0 auto;
   margin-top: 32px;
   justify-content: center;
-  gap: 55px;
+  gap: 50px;
   list-style: none;
 }
 .decoration-Studio {
@@ -64,6 +63,8 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #2196f3;
+  position: relative;
+  transition: 250ms;
 }
 .decoration-subpages {
   font-family: 'Roboto';
@@ -74,6 +75,26 @@ body {
   letter-spacing: 0.02em;
   text-decoration: none;
   color: #212121;
+  position: relative;
+  transition: 250ms;
+}
+.underline::after {
+  position: absolute;
+  content: ' ';
+  width: 100%;
+  height: 10px;
+  top: 38px;
+  transition: transform 250ms;
+  transform: scaleX(0);
+  transform-origin: right;
+  border-radius: 2px;
+  background-color: #2196f3;
+}
+.underline:hover::after {
+  transform: scale(1);
+  transform-origin: left;
+  cursor: pointer;
+  color: #2196f3;
 }
 .nav-contactos {
   display: flex;
@@ -101,6 +122,8 @@ body {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  position: relative;
+  transition: 250ms;
 }
 .decoration-phone {
   color: #757575;
@@ -111,6 +134,8 @@ body {
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  position: relative;
+  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .size-icon {
   width: 20px;
@@ -125,48 +150,103 @@ a:hover {
   color: #2196f3;
 }
 /*////////////////SOLUCIONES EFICACES SECTION-BANNER////////////////////////////////////////*/
+/* VENTANA MODAL */
 
-.main-banner {
+.modal {
+  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #111010bd;
+  display: flex;
+  opacity: 0;
+  pointer-events: none;
+}
+.modal--show {
+  z-index: 2;
+  opacity: 1;
+  pointer-events: unset;
+}
+.modal-container {
+  background-color: yellow;
+  margin: 0 auto;
+  width: 528px;
+  height: 581px;
+  margin-top: 141px;
+  background-color: #ffffff;
+  border-radius: 6px;
+  padding: 20em 20em;
+}
+.modal-close {
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  display: flex;
+  font-size: 200;
+  transition: background-color 0.3s;
+  position: relative;
+  text-decoration: none;
+  left: 242px;
+  top: -272px;
+}
+.x {
+  margin-top: 5px;
+}
+
+.modal-close:hover {
+  color: #2196f3;
+  background-color: #ffffff;
+}
+/* FIN VENTANA MODAL */
+
+/*HERO*/
+.hero {
+  width: 1600px;
+  height: 600px;
+  text-align: center;
   background-image: url(../images/Imagen.png);
   background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: auto;
+}
+.hero-title {
+  width: 696px;
+  height: 120px;
+  margin: 0 auto;
+  padding-top: 207px;
 
-  height: 600px;
-}
-.banner-background-img {
-  background: rgba(47, 48, 58, 0.4);
-  width: 1600px;
-  height: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.title {
-  color: white;
-  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 900;
   font-size: 44px;
-  margin: 0%;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
 }
-.button-service {
-  margin-top: 30px;
+.container-button {
+  margin-top: 150px;
 }
-.button-title {
+.button {
+  width: 200px;
+  height: 50px;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
   background-color: #2196f3;
   padding: 10px 32px;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  border-color: #2196f3;
-  border-radius: 4px;
+  text-decoration: none;
 }
-.button-title:hover {
-  cursor: pointer;
-}
-/*////////////////ARTICLE///////*/
+
+/*/ ///////////////ARTICLE///////*/
 
 .article {
   background-color: #ffffff;
@@ -423,12 +503,14 @@ a:hover {
 }
 /*////////////////FOOTER///////*/
 .footer {
+  width: 1600px;
+  margin: 0 auto;
   background-color: #2f303a;
   height: 252px;
   display: flex;
   flex-direction: row;
-  margin: 0 auto;
 }
+
 .footer-contacts {
   display: flex;
   flex-direction: column;
@@ -509,6 +591,7 @@ a:hover {
 
 .footer-size-icon {
   fill: #ffffff;
+  margin-top: 4px;
   width: 20px;
   height: 20px;
 }
